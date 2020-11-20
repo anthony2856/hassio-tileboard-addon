@@ -35,5 +35,5 @@ jobs:
           file: './tileboard-addon/Dockerfile'
           tags: tileboard:latest
           no-cache: true
-          platforms: linux/amd64, linux/arm/v6,linux/arm/v7, linux/386
+#          platforms: linux/amd64, linux/arm/v6,linux/arm/v7, linux/386
           push: true
