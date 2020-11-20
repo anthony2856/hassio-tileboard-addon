@@ -25,5 +25,5 @@ jobs:
       with:
         args: |
           --all \
-          --target /tileboard-addon \
+          --target ./tileboard-addon \
           --docker-hub anthonylegal
