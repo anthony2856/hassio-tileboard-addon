@@ -6,5 +6,10 @@
 
 CONFIG_FOLDER=$(bashio::config 'configFolder')
 
-bashio::log.info 'Copying configs to dist folder'
-cp -R /config/www/$CONFIG_FOLDER/* /var/www/tileboard
+bashio::log.info 'Symlink files to dist folder'
+
+for f in /config/www/$CONFIG_FOLDER/*; 
+do 
+    FILENAME=$(basename $f);
+    ln -s /config/www/$CONFIG_FOLDER/$FILENAME /var/www/tileboard/$FILENAME
+done;
