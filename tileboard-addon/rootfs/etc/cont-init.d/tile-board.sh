@@ -11,5 +11,11 @@ bashio::log.info 'Symlink files to dist folder'
 for f in /config/www/$CONFIG_FOLDER/*; 
 do 
     FILENAME=$(basename $f);
-    ln -s /config/www/$CONFIG_FOLDER/$FILENAME /var/www/tileboard/$FILENAME
+    if [ $FILENAME = 'custom.css' ]
+    then
+        rm /var/www/tileboard/styles/custom.css
+        ln -s /config/www/$CONFIG_FOLDER/$FILENAME /var/www/tileboard/styles/custom.css
+    else
+        ln -s /config/www/$CONFIG_FOLDER/$FILENAME /var/www/tileboard/$FILENAME
+    fi;
 done;
