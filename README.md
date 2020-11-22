@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: TasmoAdmin
+# Home Assistant Community Add-on: TileBoard
 
 [![Github Status][github-status]][github-status]
 
